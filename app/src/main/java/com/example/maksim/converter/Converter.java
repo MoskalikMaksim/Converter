@@ -20,7 +20,7 @@ public class Converter extends AppCompatActivity {
 
         initList();
 
-        Spinner spinnerCountries = findViewById(R.id.spinner_countries);
+        Spinner spinnerCountries = findViewById(R.id.spinner_country_first);
 
         mAdapter = new CountryAdapter(this, mCountryList);
         spinnerCountries.setAdapter(mAdapter);

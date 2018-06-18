@@ -1,75 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/white"
     tools:context=".Converter"
     tools:layout_editor_absoluteY="81dp">
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="15dp"
-        android:layout_marginTop="22dp"
-        android:background="#fff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.921"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028"
-        app:srcCompat="@drawable/settings" />
 
     <RelativeLayout
-        android:id="@+id/valut"
+        android:id="@+id/layout_setting"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="70dp"
-        android:layout_marginStart="15dp"
-        android:background="@drawable/round">
-        <Spinner
-            android:id="@+id/spinner_countries"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/setting_btn"
             android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="17dp"
-            android:popupBackground="@color/main_grey"
-            android:spinnerMode="dropdown"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.059"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.093" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="22dp"
+            android:background="#fff"
+            app:srcCompat="@drawable/settings" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="64dp"
-        android:layout_alignTop="@+id/valut"
-        android:layout_marginEnd="15dp"
-        android:layout_toEndOf="@+id/valut"
-        android:background="@drawable/border_input">
+    <LinearLayout
+        android:id="@+id/layout_converter_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round">
+            <Spinner
+                android:id="@+id/spinner_country_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
 
         <EditText
-            android:id="@+id/et_first_value"
-            android:layout_width="291dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="50dp"
-            android:background="@null"
+            android:id="@+id/et_value_first"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginRight="15dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
             android:ems="10"
-            android:inputType="number" />
-    </RelativeLayout>
+            android:inputType="number"
+            android:background="@drawable/border_input"/>
+    </LinearLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/layout_converter_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round">
+            <Spinner
+                android:id="@+id/spinner_country_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_value_second"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginRight="15dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:ems="10"
+            android:inputType="number"
+            android:background="@drawable/border_input"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
 
